@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//localhost/how/java-spring-framework-libraries/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/patterns/service-facade/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/ddd/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/patterns/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/microservices/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/books/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/</loc>
+  </url>
+  
+  <url>
+    <loc>//localhost/how/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
