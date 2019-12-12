@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Patterns</title>
-    <meta name="description" content="Patterns">
+    <title>Api Gateway</title>
+    <meta name="description" content="Api Gateway">
 
 
     <link rel="shortcut icon" href="/how-to-build-enterprise-software-with-spring-framework/images/favicon.png" type="image/x-icon" />
@@ -31,7 +31,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/how-to-build-enterprise-software-with-spring-framework/patterns/">
+  <body class="" data-url="/how-to-build-enterprise-software-with-spring-framework/rest-api/api-gateway/">
     <nav id="sidebar" class="">
 
 
@@ -317,8 +317,8 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/patterns/" title="Patterns" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/how-to-build-enterprise-software-with-spring-framework/patterns/">
@@ -463,7 +463,7 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/rest-api/" title="Rest Api" class="dd-item 
-        
+        parent
         
         
         ">
@@ -490,8 +490,8 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/rest-api/api-gateway/" title="Api Gateway" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/how-to-build-enterprise-software-with-spring-framework/rest-api/api-gateway/">
@@ -637,7 +637,13 @@
             
           
           
-            <a href='/how-to-build-enterprise-software-with-spring-framework/'>How to build enterprise software with Spring Framework (DDD, Microservices, Patterns, Books)</a> > Patterns
+            
+            
+          
+          
+            <a href='/how-to-build-enterprise-software-with-spring-framework/'>How to build enterprise software with Spring Framework (DDD, Microservices, Patterns, Books)</a> > <a href='/how-to-build-enterprise-software-with-spring-framework/rest-api/'>Rest Api</a> > Api Gateway
+          
+         
           
          
           
@@ -660,9 +666,28 @@
 
 
 
-<h1 id="patterns">Patterns</h1>
+<h1 id="api-gateway">Api Gateway</h1>
 
 <hr />
+
+<p>Implement an API gateway that is the single entry point for all clients. The API gateway handles requests in one of two ways. Some requests are simply proxied / routed to the appropriate service. It handles other requests by fanning out to multiple services.</p>
+
+<p><img src="bffe.png" alt="bffe" /></p>
+
+<h4 id="tools">Tools</h4>
+
+<ul>
+<li><a href="https://netflix.github.io/falcor/">https://netflix.github.io/falcor/</a></li>
+</ul>
+
+<h4 id="other-articles">Other articles</h4>
+
+<hr />
+
+<ul>
+<li><a href="https://netflix.github.io/falcor/starter/what-is-falcor.html">https://netflix.github.io/falcor/starter/what-is-falcor.html</a></li>
+<li><a href="https://redux.js.org/recipes/structuring-reducers/normalizing-state-shape">https://redux.js.org/recipes/structuring-reducers/normalizing-state-shape</a></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -867,7 +892,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -882,9 +906,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -969,6 +990,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -983,6 +1005,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1000,24 +1023,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1026,6 +1033,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -1046,6 +1056,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -1053,10 +1079,10 @@
 
 
         
-            <a class="nav nav-prev" href="/how-to-build-enterprise-software-with-spring-framework/ddd/bounded-context/" title="Bounded Context"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/how-to-build-enterprise-software-with-spring-framework/rest-api/" title="Rest Api"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/how-to-build-enterprise-software-with-spring-framework/patterns/service-facade/" title="Service Facade Pattern" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/how-to-build-enterprise-software-with-spring-framework/rest-api/resource-naming-guide/" title="Resource Naming Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

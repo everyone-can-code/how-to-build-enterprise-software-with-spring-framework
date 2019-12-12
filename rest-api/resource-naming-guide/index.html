@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Patterns</title>
-    <meta name="description" content="Patterns">
+    <title>Resource Naming Guide</title>
+    <meta name="description" content="Resource Naming Guide">
 
 
     <link rel="shortcut icon" href="/how-to-build-enterprise-software-with-spring-framework/images/favicon.png" type="image/x-icon" />
@@ -31,7 +31,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/how-to-build-enterprise-software-with-spring-framework/patterns/">
+  <body class="" data-url="/how-to-build-enterprise-software-with-spring-framework/rest-api/resource-naming-guide/">
     <nav id="sidebar" class="">
 
 
@@ -317,8 +317,8 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/patterns/" title="Patterns" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/how-to-build-enterprise-software-with-spring-framework/patterns/">
@@ -463,7 +463,7 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/rest-api/" title="Rest Api" class="dd-item 
-        
+        parent
         
         
         ">
@@ -514,8 +514,8 @@
   
     
     <li data-nav-id="/how-to-build-enterprise-software-with-spring-framework/rest-api/resource-naming-guide/" title="Resource Naming Guide" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/how-to-build-enterprise-software-with-spring-framework/rest-api/resource-naming-guide/">
@@ -637,7 +637,13 @@
             
           
           
-            <a href='/how-to-build-enterprise-software-with-spring-framework/'>How to build enterprise software with Spring Framework (DDD, Microservices, Patterns, Books)</a> > Patterns
+            
+            
+          
+          
+            <a href='/how-to-build-enterprise-software-with-spring-framework/'>How to build enterprise software with Spring Framework (DDD, Microservices, Patterns, Books)</a> > <a href='/how-to-build-enterprise-software-with-spring-framework/rest-api/'>Rest Api</a> > Resource Naming Guide
+          
+         
           
          
           
@@ -660,9 +666,81 @@
 
 
 
-<h1 id="patterns">Patterns</h1>
+<h1 id="resource-naming-guide">Resource Naming Guide</h1>
 
 <hr />
+
+<p>In REST, primary data representation is called Resource. Having a strong and consistent REST resource naming strategy – will definitely prove one of the best design decisions in the long term.</p>
+
+<hr />
+
+<h3 id="handle-trailing-slashes-gracefully">Handle trailing slashes gracefully</h3>
+
+<h5 id="wrong-convention"><strong>Wrong convention</strong></h5>
+
+<pre><code>GET: /articles/
+</code></pre>
+
+<h5 id="correct-convention-this-is-much-better-version"><strong>Correct convention (This is much better version)</strong></h5>
+
+<pre><code>GET: /articles
+</code></pre>
+
+<hr />
+
+<h3 id="avoid-using-verbs-in-uris">Avoid using verbs in URIs</h3>
+
+<h5 id="wrong-convention-1"><strong>Wrong convention</strong></h5>
+
+<pre><code>GET: /articles/:slug/generateBanner/
+</code></pre>
+
+<pre><code>POST: /articles/createNewArticle/
+</code></pre>
+
+<h5 id="correct-convention"><strong>Correct convention</strong></h5>
+
+<pre><code>GET: /articles/:slug/banner
+</code></pre>
+
+<pre><code>POST: /articles
+</code></pre>
+
+<h3 id="use-plural-resource-nouns">Use plural resource nouns</h3>
+
+<p>Should you use <code>/article/:id</code> (singular) or <code>/articles/:id</code> (plural)?</p>
+
+<p><strong>I recommend using the plural form.</strong></p>
+
+<p>Why? Because it fits all types of endpoints very well.</p>
+
+<p>I&rsquo;d agree that <code>GET /article/2</code> is fine, but what about GET <code>/article/?</code> Are we getting the one and only article in the system, or all of them?
+To prevent this kind of ambiguity, let&rsquo;s be consistent (life advice!) and use plural everywhere:</p>
+
+<h5 id="wrong-convention-2"><strong>Wrong convention</strong></h5>
+
+<pre><code>GET: /article/2
+POST: /article
+...
+</code></pre>
+
+<h5 id="correct-convention-1"><strong>Correct convention</strong></h5>
+
+<pre><code>GET: /articles/2
+POST: /articles
+...
+</code></pre>
+
+<hr />
+
+<h4 id="other-articles">Other articles</h4>
+
+<hr />
+
+<ul>
+<li><a href="https://restfulapi.net/resource-naming/">https://restfulapi.net/resource-naming/</a></li>
+<li><a href="https://florimond.dev/blog/articles/2018/08/restful-api-design-13-best-practices-to-make-your-users-happy/">https://florimond.dev/blog/articles/2018/08/restful-api-design-13-best-practices-to-make-your-users-happy/</a></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -867,7 +945,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -882,9 +959,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -969,6 +1043,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -984,40 +1059,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1035,6 +1078,45 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1053,10 +1135,10 @@
 
 
         
-            <a class="nav nav-prev" href="/how-to-build-enterprise-software-with-spring-framework/ddd/bounded-context/" title="Bounded Context"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/how-to-build-enterprise-software-with-spring-framework/rest-api/api-gateway/" title="Api Gateway"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/how-to-build-enterprise-software-with-spring-framework/patterns/service-facade/" title="Service Facade Pattern" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/how-to-build-enterprise-software-with-spring-framework/spa/" title="Single Page Application (SPA)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
